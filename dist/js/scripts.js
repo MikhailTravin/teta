@@ -287,70 +287,10 @@ document.querySelectorAll('.block-section__slider').forEach((slider, index) => {
     },
   });
 });
-if (document.querySelector('.block-news__slider')) {
-  const swiperNews = new Swiper('.block-news__slider', {
-    observer: true,
-    observeParents: true,
-    slidesPerView: 1,
-    spaceBetween: 10,
-    speed: 1000,
-    navigation: {
-      prevEl: '.block-news__arrow-prev',
-      nextEl: '.block-news__arrow-next',
-    },
-    breakpoints: {
-      550: {
-        slidesPerView: 1.3,
-        spaceBetween: 10,
-      },
-      700: {
-        slidesPerView: 1.6,
-        spaceBetween: 10,
-      },
-      992: {
-        slidesPerView: 2,
-        spaceBetween: 15,
-      },
-      1400: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-    },
-    on: {
-      init: function () {
-        addVisibleSlideClasses(this);
-      },
-      slideChange: function () {
-        addVisibleSlideClasses(this);
-      },
-      resize: function () {
-        addVisibleSlideClasses(this);
-      },
-      slideChangeTransitionEnd: function () {
-        addVisibleSlideClasses(this);
-      }
-    }
-  });
-
-  function addVisibleSlideClasses(swiper) {
-    swiper.slides.forEach((slide) => {
-      slide.classList.remove('slide1', 'slide2', 'slide3', 'slide4');
-    });
-
-    for (let i = 0; i < swiper.params.slidesPerView; i++) {
-      const slideIndex = swiper.activeIndex + i;
-      if (swiper.slides[slideIndex]) {
-        swiper.slides[slideIndex].classList.add(`slide${i + 1}`);
-      }
-    }
-  }
-}
-
-
-if (document.querySelector('.block-brands__slider')) {
-  const slider = document.querySelector('.block-brands__slider');
-  const wrapper = document.querySelector('.block-brands__wrapper');
-  const slides = document.querySelectorAll('.block-brands__slide');
+if (document.querySelector('.block-brands-filter__slider')) {
+  const slider = document.querySelector('.block-brands-filter__slider');
+  const wrapper = document.querySelector('.block-brands-filter__wrapper');
+  const slides = document.querySelectorAll('.block-brands-filter__slide');
 
   slides.forEach(slide => {
     const clone = slide.cloneNode(true);
@@ -393,3 +333,157 @@ const telephone = document.querySelectorAll(".tel");
 if (telephone) Inputmask({
   mask: "+7 (999) - 999 - 99 - 99"
 }).mask(telephone);
+
+const filterContainers = document.querySelectorAll('[data-filters]');
+if (filterContainers) {
+  const swiperInstances = {};
+  function initSwipers() {
+    if (document.querySelector('.block-news-bottom__slider')) {
+      swiperInstances.news = new Swiper('.block-news-bottom__slider', {
+        observer: true,
+        observeParents: true,
+        autoHeight: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        breakpoints: {
+          550: {
+            slidesPerView: 1.3,
+            spaceBetween: 10,
+          },
+          700: {
+            slidesPerView: 1.6,
+            spaceBetween: 10,
+          },
+          992: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          1400: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      });
+    }
+
+    if (document.querySelector('.block-brands__slider')) {
+      swiperInstances.brands = new Swiper('.block-brands__slider', {
+        observer: true,
+        observeParents: true,
+        autoHeight: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        breakpoints: {
+          550: {
+            slidesPerView: 1.5,
+            spaceBetween: 10,
+          },
+          700: {
+            slidesPerView: 2.5,
+            spaceBetween: 10,
+          },
+          992: {
+            slidesPerView: 3.5,
+            spaceBetween: 15,
+          },
+          1400: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        },
+      });
+    }
+  }
+  function updateSwipers() {
+    if (swiperInstances.news) {
+      swiperInstances.news.update();
+      swiperInstances.news.updateAutoHeight();
+      swiperInstances.news.slideTo(0);
+    }
+
+    if (swiperInstances.brands) {
+      swiperInstances.brands.update();
+      swiperInstances.brands.updateAutoHeight();
+      swiperInstances.brands.slideTo(0);
+    }
+  }
+  function initFilters() {
+
+    filterContainers.forEach(container => {
+      const filterButtons = container.querySelectorAll('.filter-title');
+      const filterBlocks = container.querySelectorAll('.filter-block');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const filterValue = button.getAttribute('data-filter');
+
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+
+          filterBlocks.forEach(block => {
+            const blockFilter = block.getAttribute('data-filter');
+
+            if (filterValue === 'all' || blockFilter === filterValue) {
+              block.classList.remove('hide');
+            } else {
+              block.classList.add('hide');
+            }
+          });
+
+          updateSwipers();
+        });
+      });
+    });
+  }
+  initSwipers();
+  initFilters();
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const menuIcon = document.querySelector('.icon-menu');
+  const menuBody = document.querySelector('.menu__body');
+  const header = document.querySelector('.header');
+  const menu = document.querySelector('.menu');
+
+  // Функция открытия меню
+  function openMenu() {
+    document.documentElement.classList.add('menu-open');
+  }
+
+  // Функция закрытия меню
+  function closeMenu() {
+    document.documentElement.classList.remove('menu-open');
+  }
+
+  // Функция проверки, является ли элемент частью меню или хедера
+  function isMenuOrHeader(element) {
+    return header.contains(element) || menu.contains(element);
+  }
+
+  // Обработчик клика на иконку меню
+  menuIcon.addEventListener('click', function (e) {
+    e.stopPropagation();
+
+    if (document.documentElement.classList.contains('menu-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Обработчик клика по документу
+  document.addEventListener('click', function (e) {
+    if (document.documentElement.classList.contains('menu-open') &&
+      !isMenuOrHeader(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // Обработчик клика на ссылки внутри меню (опционально)
+  const menuLinks = menuBody.querySelectorAll('a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      closeMenu();
+    });
+  });
+});

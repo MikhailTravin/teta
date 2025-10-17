@@ -15,6 +15,16 @@
 .main {
   flex-grow: 1;
   flex-shrink: 1;
+  padding: 150px 0px 0px 0px;
+  @media (max-width: 768px) {
+    padding: 120px 0px 0px 0px;
+  }
+  @media (max-width: 550px) {
+    padding: 110px 0px 0px 0px;
+  }
+  @media (max-width: 480px) {
+    padding: 90px 0px 0px 0px;
+  }
 }
 
 .container {

@@ -17,7 +17,154 @@
 
 	<body class="preload mp">
 		<div class="main-wrapper-outer">
-
+			<header class="header">
+				<div class="container">
+					<div class="header__content">
+						<a href="#" class="header__logo">
+							<img src="img/logo.webp" alt="">
+						</a>
+						<div class="header__right">
+							<div class="header__contacts">
+								<a href="tel:88002501277" class="phone">
+									<svg aria-hidden="true" width="20" height="20">
+										<use xlink:href="img/sprite.svg#phone1"></use>
+									</svg>
+									<span>8 800 250 12 77</span>
+								</a>
+								<div class="socials">
+									<a href="#" style="color: #21B5E8;">
+										<svg aria-hidden="true" width="20" height="20">
+											<use xlink:href="img/sprite.svg#telegram"></use>
+										</svg>
+									</a>
+									<a href="#" style="color: #95c940;">
+										<svg aria-hidden="true" width="20" height="20">
+											<use xlink:href="img/sprite.svg#whatsapp"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<a href="#" class="header__button btn2">
+								<span>Нужна консультация</span>
+							</a>
+							<div class="menu">
+								<button type="button" class="menu__icon icon-menu"><span></span></button>
+								<nav class="menu__body">
+									<div class="menu__scroll">
+										<div class="menu__content">
+											<div class="menu__column">
+												<a href="#" class="menu__title">О нас</a>
+											</div>
+											<div class="menu__column">
+												<a href="#" class="menu__title">Услуги</a>
+												<ul>
+													<li>
+														<a href="#">Разработка электроники</a>
+													</li>
+													<li>
+														<a href="#">Разработка ПО</a>
+													</li>
+													<li>
+														<a href="#">НИОКР и аудит проектов</a>
+													</li>
+													<li>
+														<a href="#">Импортозамещение и локализация</a>
+													</li>
+													<li>
+														<a href="#">Реверс инжиниринг электроники и ПО</a>
+													</li>
+													<li>
+														<a href="#">Разработка и производство устройств</a>
+													</li>
+												</ul>
+											</div>
+											<div class="menu__column">
+												<a href="#" class="menu__title">Решения</a>
+												<ul>
+													<li>
+														<a href="#">Промышленная автоматизация</a>
+													</li>
+													<li>
+														<a href="#">Робототехника</a>
+													</li>
+													<li>
+														<a href="#">Программно-аппаратные комплексы</a>
+													</li>
+													<li>
+														<a href="#">АСУ ТП</a>
+													</li>
+													<li>
+														<a href="#">Облачные решения</a>
+													</li>
+													<li>
+														<a href="#">Умный дом и город</a>
+													</li>
+													<li>
+														<a href="#">Промышленный и потребительский IoT</a>
+													</li>
+												</ul>
+											</div>
+											<div class="menu__column">
+												<a href="#" class="menu__title">Экспертиза</a>
+												<ul>
+													<li>
+														<a href="#">Промышленность</a>
+													</li>
+													<li>
+														<a href="#">Индустрия 4.0</a>
+													</li>
+													<li>
+														<a href="#">Логистика</a>
+													</li>
+													<li>
+														<a href="#">Медицина</a>
+													</li>
+													<li>
+														<a href="#">Образование</a>
+													</li>
+													<li>
+														<a href="#">Государственный сектор</a>
+													</li>
+													<li>
+														<a href="#">Нефтегазовая и добывающая отрасли</a>
+													</li>
+													<li>
+														<a href="#">Сельское хозяйство</a>
+													</li>
+													<li>
+														<a href="#">Телекоммуникации</a>
+													</li>
+												</ul>
+											</div>
+											<div class="menu__column">
+												<a href="#" class="menu__title">Портфолио</a>
+											</div>
+											<div class="menu__column">
+												<a href="#" class="menu__title">Производство</a>
+											</div>
+											<div class="menu__column">
+												<a href="#" class="menu__title">Контакты</a>
+											</div>
+										</div>
+										<div class="menu-banner">
+											<div class="menu-banner__top">
+												<div class="menu-banner__title">
+													Подкаст «Платы и Байты»
+												</div>
+												<p>
+													Беседы о развитии разработки электроники в России.
+												</p>
+												<a href="#" class="btn2"><span>Подробнее</span></a>
+											</div>
+											<img src="img/image1.webp" alt="">
+										</div>
+									</div>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
 			<main class="main">
 
 				<div class="block-benefits block1">
@@ -332,51 +479,183 @@
 					</div>
 				</div>
 
-				<div class="block-brands block1">
+				<div data-filters class="block-brands block1">
 					<div class="container">
-						<h2 class="title2">Компании, которые успешно используют наше оборудование</h2>
 						<div class="block-brands__content">
+							<h2 class="title2">Компании, которые успешно используют наше оборудование</h2>
+							<div class="block-brands-filter__slider swiper">
+								<div class="block-brands-filter__wrapper swiper-wrapper">
+									<button type="button" data-filter="brands1" class="block-brands-filter__slide swiper-slide filter-title active">
+										Международная
+										консультация</button>
+									<button type="button" data-filter="brands2" class="block-brands-filter__slide swiper-slide filter-title">
+										Международная
+										консультация</button>
+									<button type="button" data-filter="brands3" class="block-brands-filter__slide swiper-slide filter-title">
+										Международная
+										консультация</button>
+									<button type="button" data-filter="brands4" class="block-brands-filter__slide swiper-slide filter-title">
+										Международная
+										консультация</button>
+									<button type="button" data-filter="brands5" class="block-brands-filter__slide swiper-slide filter-title">
+										Международная
+										консультация</button>
+									<button type="button" data-filter="brands6" class="block-brands-filter__slide swiper-slide filter-title">
+										Международная
+										консультация</button>
+									<button type="button" data-filter="brands7" class="block-brands-filter__slide swiper-slide filter-title">
+										Международная
+										консультация</button>
+								</div>
+							</div>
 							<div class="block-brands__slider swiper">
 								<div class="block-brands__wrapper swiper-wrapper">
-									<div class="block-brands__slide swiper-slide">
+									<div data-filter="brands1" class="block-brands__slide swiper-slide filter-block">
+										<div class="block-brands__info">
+											<img loading="lazy" src="img/info.svg" alt="">
+											<span>Мероприятие: Актуально</span>
+										</div>
 										<div class="block-brands__image">
 											<img loading="lazy" src="img/brands1.webp" alt="">
+											<div class="block-brands__data">
+												<svg aria-hidden="true" width="14" height="14">
+													<use xlink:href="img/sprite.svg#calendar"></use>
+												</svg>
+												<span>18.09.2025</span>
+											</div>
 										</div>
 										<div class="block-brands__title">
 											Название компании
 											<span>Страна</span>
 										</div>
 									</div>
-									<div class="block-brands__slide swiper-slide">
+									<div data-filter="brands1" class="block-brands__slide swiper-slide filter-block">
+										<div class="block-brands__info">
+											<img loading="lazy" src="img/info.svg" alt="">
+											<span>Мероприятие: Актуально</span>
+										</div>
 										<div class="block-brands__image">
 											<img loading="lazy" src="img/brands1.webp" alt="">
+											<div class="block-brands__data">
+												<svg aria-hidden="true" width="14" height="14">
+													<use xlink:href="img/sprite.svg#calendar"></use>
+												</svg>
+												<span>18.09.2025</span>
+											</div>
 										</div>
 										<div class="block-brands__title">
 											Название компании
 											<span>Страна</span>
 										</div>
 									</div>
-									<div class="block-brands__slide swiper-slide">
+									<div data-filter="brands2" class="block-brands__slide swiper-slide filter-block hide">
+										<div class="block-brands__info">
+											<img loading="lazy" src="img/info.svg" alt="">
+											<span>Мероприятие: Актуально</span>
+										</div>
 										<div class="block-brands__image">
 											<img loading="lazy" src="img/brands1.webp" alt="">
+											<div class="block-brands__data">
+												<svg aria-hidden="true" width="14" height="14">
+													<use xlink:href="img/sprite.svg#calendar"></use>
+												</svg>
+												<span>18.09.2025</span>
+											</div>
 										</div>
 										<div class="block-brands__title">
 											Название компании
 											<span>Страна</span>
 										</div>
 									</div>
-									<div class="block-brands__slide swiper-slide">
+									<div data-filter="brands3" class="block-brands__slide swiper-slide filter-block hide">
+										<div class="block-brands__info">
+											<img loading="lazy" src="img/info.svg" alt="">
+											<span>Мероприятие: Актуально</span>
+										</div>
 										<div class="block-brands__image">
 											<img loading="lazy" src="img/brands1.webp" alt="">
+											<div class="block-brands__data">
+												<svg aria-hidden="true" width="14" height="14">
+													<use xlink:href="img/sprite.svg#calendar"></use>
+												</svg>
+												<span>18.09.2025</span>
+											</div>
 										</div>
 										<div class="block-brands__title">
 											Название компании
 											<span>Страна</span>
 										</div>
 									</div>
-									<div class="block-brands__slide swiper-slide">
+									<div data-filter="brands4" class="block-brands__slide swiper-slide filter-block hide">
+										<div class="block-brands__info">
+											<img loading="lazy" src="img/info.svg" alt="">
+											<span>Мероприятие: Актуально</span>
+										</div>
 										<div class="block-brands__image">
 											<img loading="lazy" src="img/brands1.webp" alt="">
+											<div class="block-brands__data">
+												<svg aria-hidden="true" width="14" height="14">
+													<use xlink:href="img/sprite.svg#calendar"></use>
+												</svg>
+												<span>18.09.2025</span>
+											</div>
+										</div>
+										<div class="block-brands__title">
+											Название компании
+											<span>Страна</span>
+										</div>
+									</div>
+									<div data-filter="brands5" class="block-brands__slide swiper-slide filter-block hide">
+										<div class="block-brands__info">
+											<img loading="lazy" src="img/info.svg" alt="">
+											<span>Мероприятие: Актуально</span>
+										</div>
+										<div class="block-brands__image">
+											<img loading="lazy" src="img/brands1.webp" alt="">
+											<div class="block-brands__data">
+												<svg aria-hidden="true" width="14" height="14">
+													<use xlink:href="img/sprite.svg#calendar"></use>
+												</svg>
+												<span>18.09.2025</span>
+											</div>
+										</div>
+										<div class="block-brands__title">
+											Название компании
+											<span>Страна</span>
+										</div>
+									</div>
+									<div data-filter="brands6" class="block-brands__slide swiper-slide filter-block hide">
+										<div class="block-brands__info">
+											<img loading="lazy" src="img/info.svg" alt="">
+											<span>Мероприятие: Актуально</span>
+										</div>
+										<div class="block-brands__image">
+											<img loading="lazy" src="img/brands1.webp" alt="">
+											<div class="block-brands__data">
+												<svg aria-hidden="true" width="14" height="14">
+													<use xlink:href="img/sprite.svg#calendar"></use>
+												</svg>
+												<span>18.09.2025</span>
+											</div>
+										</div>
+										<div class="block-brands__title">
+											Название компании
+											<span>Страна</span>
+										</div>
+									</div>
+									<div data-filter="brands7" class="block-brands__slide swiper-slide filter-block hide">
+										<div class="block-brands__info">
+											<img loading="lazy" src="img/info.svg" alt="">
+											<span>Мероприятие: Актуально</span>
+										</div>
+										<div class="block-brands__image">
+											<img loading="lazy" src="img/brands1.webp" alt="">
+											<div class="block-brands__data">
+												<svg aria-hidden="true" width="14" height="14">
+													<use xlink:href="img/sprite.svg#calendar"></use>
+												</svg>
+												<span>18.09.2025</span>
+											</div>
 										</div>
 										<div class="block-brands__title">
 											Название компании
@@ -470,116 +749,130 @@
 					</div>
 				</div>
 
-				<div class="block-news block1">
+				<div data-filters class="block-news block1">
 					<div class="container">
-						<h2 class="title2">Новости</h2>
-						<div class="block-news__content">
-							<div class="block-news__slider swiper">
-								<div class="block-news__wrapper swiper-wrapper">
-									<div class="block-news__slide swiper-slide">
-										<div class="block-news__item">
-											<div class="block-news__data">
-												<img loading="lazy" src="img/time1.svg" alt="">
-												<span>06.10.2025</span>
-											</div>
-											<div class="block-news__body">
-												<img loading="lazy" src="img/news1.webp" alt="" class="block-news__pic1">
-												<div class="block-news__titles">
-													<p>
-														Запрос предложений для заключения договора на оказание услуг по
-														организации, проведению и обеспечению участия субъектов малого и
-														среднего ...
-													</p>
-													<a href="#">
-														<svg aria-hidden="true" width="40" height="40">
-															<use xlink:href="img/sprite.svg#arrow3"></use>
-														</svg>
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="block-news__slide swiper-slide">
-										<div class="block-news__item">
-											<div class="block-news__data">
-												<img loading="lazy" src="img/time1.svg" alt="">
-												<span>06.10.2025</span>
-											</div>
-											<div class="block-news__body">
-												<img loading="lazy" src="img/news1.webp" alt="" class="block-news__pic1">
-												<div class="block-news__titles">
-													<p>
-														Запрос предложений для заключения договора на оказание услуг по
-														организации, проведению и обеспечению участия субъектов малого и
-														среднего ...
-													</p>
-													<a href="#">
-														<svg aria-hidden="true" width="40" height="40">
-															<use xlink:href="img/sprite.svg#arrow3"></use>
-														</svg>
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="block-news__slide swiper-slide">
-										<div class="block-news__item">
-											<div class="block-news__data">
-												<img loading="lazy" src="img/time1.svg" alt="">
-												<span>06.10.2025</span>
-											</div>
-											<div class="block-news__body">
-												<img loading="lazy" src="img/news1.webp" alt="" class="block-news__pic1">
-												<div class="block-news__titles">
-													<p>
-														Запрос предложений для заключения договора на оказание услуг по
-														организации, проведению и обеспечению участия субъектов малого и
-														среднего ...
-													</p>
-													<a href="#">
-														<svg aria-hidden="true" width="40" height="40">
-															<use xlink:href="img/sprite.svg#arrow3"></use>
-														</svg>
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="block-news__slide swiper-slide">
-										<div class="block-news__item">
-											<div class="block-news__data">
-												<img loading="lazy" src="img/time1.svg" alt="">
-												<span>06.10.2025</span>
-											</div>
-											<div class="block-news__body">
-												<img loading="lazy" src="img/news1.webp" alt="" class="block-news__pic1">
-												<div class="block-news__titles">
-													<p>
-														Запрос предложений для заключения договора на оказание услуг по
-														организации, проведению и обеспечению участия субъектов малого и
-														среднего ...
-													</p>
-													<a href="#">
-														<svg aria-hidden="true" width="40" height="40">
-															<use xlink:href="img/sprite.svg#arrow3"></use>
-														</svg>
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+						<div class="block-news-top">
+							<div class="block-news-top__left">
+								<h2 class="title2">Новости и проекты</h2>
+								<p>
+									Описание
+								</p>
 							</div>
-							<div class="arrows">
-								<div class="block-news__arrow-prev arrow-prev">
-									<svg aria-hidden="true" width="14" height="14">
-										<use xlink:href="img/sprite.svg#arrow1"></use>
-									</svg>
-								</div>
-								<div class="block-news__arrow-next arrow-next">
-									<svg aria-hidden="true" width="14" height="14">
-										<use xlink:href="img/sprite.svg#arrow1"></use>
-									</svg>
+							<div class="block-news-top__filter">
+								<button data-filter="all" type="button" class="block-news-top__title filter-title active">Все</button>
+								<button data-filter="news" type="button" class="block-news-top__title filter-title">Новости</button>
+								<button data-filter="project" type="button" class="block-news-top__title filter-title">Проекты</button>
+							</div>
+						</div>
+						<div class="block-news-bottom">
+							<div class="block-news-bottom__slider swiper">
+								<div class="block-news-bottom__wrapper swiper-wrapper">
+									<a href="#" data-filter="news" class="block-news-bottom__slide swiper-slide filter-block">
+										<div class="block-news-bottom__image">
+											<img loading="lazy" src="img/news1.webp" alt="" class="block-news-bottom__pic1">
+											<div class="block-news-bottom__data">
+												<svg aria-hidden="true" width="14" height="14">
+													<use xlink:href="img/sprite.svg#calendar"></use>
+												</svg>
+												<span>22 июля, 2025</span>
+											</div>
+										</div>
+										<div class="block-news-bottom__item">
+											<div class="block-news-bottom__title">
+												ООО «ТЕТА-Системы» осуществило поставку никель-кадмиевой аккумуляторной
+												батареи GN400-3 (международное название KPL400)
+											</div>
+											<div class="btn2"><span>Читать</span></div>
+										</div>
+									</a>
+									<a href="#" data-filter="project" class="block-news-bottom__slide swiper-slide filter-block">
+										<div class="block-news-bottom__image">
+											<img loading="lazy" src="img/news2.webp" alt="" class="block-news-bottom__pic1">
+											<div class="block-news-bottom__data">
+												<svg aria-hidden="true" width="14" height="14">
+													<use xlink:href="img/sprite.svg#calendar"></use>
+												</svg>
+												<span>10 января, 2025</span>
+											</div>
+										</div>
+										<div class="block-news-bottom__item">
+											<div class="block-news-bottom__title">
+												Единая информационная система в сфере закупок
+											</div>
+											<p>
+												Юридическое лицо «ООО «ТЕТА-СИСТЕМЫ»» (ИНН 5609206381, КПП 560901001, ОГРН
+												1245600009071) и представитель юридического лица «Кочедыков Владислав
+												Юрьевич» зарегистрированы в Единой информационной системе в сфере закупок.
+												Юридическому лицу присвоены:— уникал...
+											</p>
+											<div class="btn2"><span>Читать</span></div>
+										</div>
+									</a>
+									<a href="#" data-filter="news" class="block-news-bottom__slide swiper-slide filter-block">
+										<div class="block-news-bottom__image">
+											<img loading="lazy" src="img/news3.webp" alt="" class="block-news-bottom__pic1">
+											<div class="block-news-bottom__data">
+												<svg aria-hidden="true" width="14" height="14">
+													<use xlink:href="img/sprite.svg#calendar"></use>
+												</svg>
+												<span>22 июля, 2025</span>
+											</div>
+										</div>
+										<div class="block-news-bottom__item">
+											<div class="block-news-bottom__title">
+												8 800 250 12 77 — новый телефонный номер компании
+											</div>
+											<p>
+												Изменен основной номер для связи с компанией — 8 800 250 12 77. Номер
+												многоканальный и работает с 10:00 до 21:00 ежедневно без выходных.
+											</p>
+											<div class="btn2"><span>Читать</span></div>
+										</div>
+									</a>
+									<a href="#" data-filter="project" class="block-news-bottom__slide swiper-slide filter-block">
+										<div class="block-news-bottom__image">
+											<img loading="lazy" src="img/news2.webp" alt="" class="block-news-bottom__pic1">
+											<div class="block-news-bottom__data">
+												<svg aria-hidden="true" width="14" height="14">
+													<use xlink:href="img/sprite.svg#calendar"></use>
+												</svg>
+												<span>10 января, 2025</span>
+											</div>
+										</div>
+										<div class="block-news-bottom__item">
+											<div class="block-news-bottom__title">
+												Единая информационная система в сфере закупок
+											</div>
+											<p>
+												Юридическое лицо «ООО «ТЕТА-СИСТЕМЫ»» (ИНН 5609206381, КПП 560901001, ОГРН
+												1245600009071) и представитель юридического лица «Кочедыков Владислав
+												Юрьевич» зарегистрированы в Единой информационной системе в сфере закупок.
+												Юридическому лицу присвоены:— уникал...
+											</p>
+											<div class="btn2"><span>Читать</span></div>
+										</div>
+									</a>
+									<a href="#" data-filter="news" class="block-news-bottom__slide swiper-slide filter-block">
+										<div class="block-news-bottom__image">
+											<img loading="lazy" src="img/news3.webp" alt="" class="block-news-bottom__pic1">
+											<div class="block-news-bottom__data">
+												<svg aria-hidden="true" width="14" height="14">
+													<use xlink:href="img/sprite.svg#calendar"></use>
+												</svg>
+												<span>22 июля, 2025</span>
+											</div>
+										</div>
+										<div class="block-news-bottom__item">
+											<div class="block-news-bottom__title">
+												8 800 250 12 77 — новый телефонный номер компании
+											</div>
+											<p>
+												Изменен основной номер для связи с компанией — 8 800 250 12 77. Номер
+												многоканальный и работает с 10:00 до 21:00 ежедневно без выходных.
+											</p>
+											<div class="btn2"><span>Читать</span></div>
+										</div>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -798,13 +1091,6 @@
 					</div>
 				</div>
 			</footer>
-			<svg height="0" width="0">
-				<defs>
-					<clipPath id="svg_mask_news" clipPathUnits="objectBoundingBox">
-						<path d="M0 0.0483871C0 0.0216637 0.023564 0 0.0526316 0H0.484211C0.513278 0 0.536842 0.0216636 0.536842 0.0483871V0.0741935C0.536842 0.100917 0.560406 0.122581 0.589474 0.122581H0.947368C0.976436 0.122581 1 0.144244 1 0.170968V0.951613C1 0.978336 0.976436 1 0.947368 1H0.0526316C0.0235639 1 0 0.978336 0 0.951613V0.0483871Z" fill="#D9D9D9"></path>
-					</clipPath>
-				</defs>
-			</svg>
 		</div>
 		<script src="js/swiper-10.2.0.min.js"></script>
 		<script src="js/fancybox.umd.js"></script>

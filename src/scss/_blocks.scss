@@ -1278,7 +1278,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 30px;
+  gap: 20px;
   @media (max-width: 768px) {
     gap: 15px;
   }
@@ -1317,27 +1317,12 @@
       }
     }
   }
-}
-.checkbox {
-  // .checkbox__input
 
-  &__input {
+  // .form__error
+
+  &__error {
+    color: red;
+    font-size: 12px;
+    margin: 3px 0px 0px 5px;
   }
-
-  // .checkbox__label
-
-  &__label {
-  }
-
-  // .checkbox__icon
-
-  &__icon {
-  }
-
-  // .checkbox__text
-
-  &__text {
-  }
-}
-.btn2 {
 }

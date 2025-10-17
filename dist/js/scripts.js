@@ -387,3 +387,9 @@ if (document.querySelector('.block-brands__slider')) {
 Fancybox.bind("[data-fancybox]", {
   // опции
 });
+
+//Маска телефон
+const telephone = document.querySelectorAll(".tel");
+if (telephone) Inputmask({
+  mask: "+7 (999) - 999 - 99 - 99"
+}).mask(telephone);

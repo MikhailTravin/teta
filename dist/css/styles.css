@@ -2894,7 +2894,7 @@ a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  gap: 30px;
+  gap: 20px;
 }
 @media (max-width: 768px) {
   .form {
@@ -2945,6 +2945,11 @@ a {
   padding: 20px;
   height: 120px;
   resize: none;
+}
+.form__error {
+  color: red;
+  font-size: 12px;
+  margin: 3px 0px 0px 5px;
 }
 
 .swiper-button-lock {

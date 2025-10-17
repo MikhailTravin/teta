@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<title>Фильтр</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/fancybox.min.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+	</head>
+
+	<body class="preload mp">
+		<div class="main-wrapper-outer">
+			<main class="main">
+
+				<div class="block-filter">
+					<div class="container">
+						<div class="block-filter__content">
+							<div class="block-filter__title">
+								фильтр
+							</div>
+							<div class="block-filter__body">
+								<div class="block-filter__columns">
+									<div class="block-filter__column">
+										<div class="block-filter__name">Категории</div>
+										<div class="block-filter__checkboxes">
+											<div class="checkbox">
+												<input checked id="c_1" class="checkbox__input" type="checkbox" value="1" name="checkbox1">
+												<label for="c_1" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Москва</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_2" class="checkbox__input" type="checkbox" value="2" name="checkbox1">
+												<label for="c_2" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Санкт-Петербург</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_3" class="checkbox__input" type="checkbox" value="3" name="checkbox1">
+												<label for="c_3" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Золотое кольцо</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_4" class="checkbox__input" type="checkbox" value="4" name="checkbox1">
+												<label for="c_4" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Казань</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_5" class="checkbox__input" type="checkbox" value="5" name="checkbox1">
+												<label for="c_5" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Байкал</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_6" class="checkbox__input" type="checkbox" value="6" name="checkbox1">
+												<label for="c_6" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Экотуры</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="block-filter__column">
+										<div class="block-filter__name">Популярные запросы</div>
+										<div class="block-filter__checkboxes">
+											<div class="checkbox">
+												<input checked id="c_7" class="checkbox__input" type="checkbox" value="7" name="checkbox2">
+												<label for="c_7" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">С обедами</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_8" class="checkbox__input" type="checkbox" value="8" name="checkbox2">
+												<label for="c_8" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">С мастер-классами</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_9" class="checkbox__input" type="checkbox" value="9" name="checkbox2">
+												<label for="c_9" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Для рейтинга школы</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_10" class="checkbox__input" type="checkbox" value="10" name="checkbox2">
+												<label for="c_10" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">На выпускной</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="block-filter__column">
+										<div class="block-filter__name">Класс</div>
+										<div class="block-filter__checkboxes class">
+											<div class="checkbox class">
+												<input checked id="c_11" class="checkbox__input" type="checkbox" value="11" name="checkbox3">
+												<label for="c_11" class="checkbox__label">
+													<span class="checkbox__icon">
+														1
+													</span>
+												</label>
+											</div>
+											<div class="checkbox class">
+												<input id="c_12" class="checkbox__input" type="checkbox" value="12" name="checkbox3">
+												<label for="c_12" class="checkbox__label">
+													<span class="checkbox__icon">
+														2
+													</span>
+												</label>
+											</div>
+											<div class="checkbox class">
+												<input id="c_13" class="checkbox__input" type="checkbox" value="13" name="checkbox3">
+												<label for="c_13" class="checkbox__label">
+													<span class="checkbox__icon">
+														3
+													</span>
+												</label>
+											</div>
+											<div class="checkbox class">
+												<input id="c_14" class="checkbox__input" type="checkbox" value="14" name="checkbox3">
+												<label for="c_14" class="checkbox__label">
+													<span class="checkbox__icon">
+														4
+													</span>
+												</label>
+											</div>
+											<div class="checkbox class">
+												<input id="c_15" class="checkbox__input" type="checkbox" value="15" name="checkbox3">
+												<label for="c_15" class="checkbox__label">
+													<span class="checkbox__icon">
+														5
+													</span>
+												</label>
+											</div>
+											<div class="checkbox class">
+												<input id="c_16" class="checkbox__input" type="checkbox" value="16" name="checkbox3">
+												<label for="c_16" class="checkbox__label">
+													<span class="checkbox__icon">
+														6
+													</span>
+												</label>
+											</div>
+											<div class="checkbox class">
+												<input id="c_17" class="checkbox__input" type="checkbox" value="17" name="checkbox3">
+												<label for="c_17" class="checkbox__label">
+													<span class="checkbox__icon">
+														7
+													</span>
+												</label>
+											</div>
+											<div class="checkbox class">
+												<input id="c_18" class="checkbox__input" type="checkbox" value="18" name="checkbox3">
+												<label for="c_18" class="checkbox__label">
+													<span class="checkbox__icon">
+														8
+													</span>
+												</label>
+											</div>
+											<div class="checkbox class">
+												<input id="c_19" class="checkbox__input" type="checkbox" value="19" name="checkbox3">
+												<label for="c_19" class="checkbox__label">
+													<span class="checkbox__icon">
+														9
+													</span>
+												</label>
+											</div>
+											<div class="checkbox class">
+												<input id="c_20" class="checkbox__input" type="checkbox" value="20" name="checkbox3">
+												<label for="c_20" class="checkbox__label">
+													<span class="checkbox__icon">
+														10
+													</span>
+												</label>
+											</div>
+											<div class="checkbox class">
+												<input id="c_21" class="checkbox__input" type="checkbox" value="21" name="checkbox3">
+												<label for="c_21" class="checkbox__label">
+													<span class="checkbox__icon">
+														11
+													</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="block-filter__column">
+										<div class="block-filter__name">Стоимость на одного человека, р.</div>
+										<div class="block-filter__rating">
+											<div class="block-filter__inputs">
+												<div class="block-filter__input">
+													<input id="price-start" autocomplete="off" type="text" name="form[]" placeholder="1 140">
+												</div>
+												<div class="block-filter__input">
+													<input id="price-end" autocomplete="off" type="text" name="form[]" placeholder="264 500">
+												</div>
+											</div>
+											<div class="block-filter__range"></div>
+										</div>
+									</div>
+									<div class="block-filter__column">
+										<div class="block-filter__name">Продолжительность</div>
+										<div class="block-filter__checkboxes">
+											<div class="checkbox">
+												<input checked id="c_22" class="checkbox__input" type="checkbox" value="22" name="checkbox4">
+												<label for="c_22" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Полдня (до 6 часов)</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_23" class="checkbox__input" type="checkbox" value="23" name="checkbox4">
+												<label for="c_23" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Целый день (6+ часов)</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="block-filter__column">
+										<div class="block-filter__name">Место проведения</div>
+										<div class="block-filter__checkboxes">
+											<div class="checkbox">
+												<input checked id="c_24" class="checkbox__input" type="checkbox" value="24" name="checkbox5">
+												<label for="c_24" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Москва</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_25" class="checkbox__input" type="checkbox" value="25" name="checkbox5">
+												<label for="c_25" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Московская область</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_26" class="checkbox__input" type="checkbox" value="26" name="checkbox5">
+												<label for="c_26" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Калужская область</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_27" class="checkbox__input" type="checkbox" value="27" name="checkbox5">
+												<label for="c_27" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Владимирская область</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_28" class="checkbox__input" type="checkbox" value="28" name="checkbox5">
+												<label for="c_28" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Рязанская область</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div data-showmore="items" class="block-filter__column">
+										<div class="block-filter__name">Типы экскурсий</div>
+										<div data-showmore-content="5" class="block-filter__checkboxes">
+											<div class="checkbox">
+												<input checked id="c_29" class="checkbox__input" type="checkbox" value="29" name="checkbox6">
+												<label for="c_29" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Музеи</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_30" class="checkbox__input" type="checkbox" value="30" name="checkbox6">
+												<label for="c_30" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Производство</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_31" class="checkbox__input" type="checkbox" value="31" name="checkbox6">
+												<label for="c_31" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Театр</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_32" class="checkbox__input" type="checkbox" value="32" name="checkbox6">
+												<label for="c_32" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Усадьба</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_33" class="checkbox__input" type="checkbox" value="33" name="checkbox6">
+												<label for="c_33" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Парк</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_34" class="checkbox__input" type="checkbox" value="34" name="checkbox6">
+												<label for="c_34" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Парк</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_35" class="checkbox__input" type="checkbox" value="35" name="checkbox6">
+												<label for="c_35" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">Парк</span>
+												</label>
+											</div>
+										</div>
+										<button hidden data-showmore-button type="button" class="block-filter__more btn btn-green">
+											<span>Показать еще</span>
+											<span>Скрыть</span>
+										</button>
+									</div>
+									<div class="block-filter__column">
+										<div class="block-filter__name">Уровень активности</div>
+										<div class="block-filter__checkboxes">
+											<div class="checkbox">
+												<input checked id="c_36" class="checkbox__input" type="checkbox" value="36" name="checkbox7">
+												<label for="c_36" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">
+														Низкий <span>(лекции, экскурсии по музеям)</span>
+													</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_37" class="checkbox__input" type="checkbox" value="37" name="checkbox7">
+												<label for="c_37" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">
+														Средний <span>(городские пешеходные экскурсии)</span>
+													</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="c_38" class="checkbox__input" type="checkbox" value="38" name="checkbox7">
+												<label for="c_38" class="checkbox__label">
+													<span class="checkbox__icon">
+														<img loading="lazy" src="img/icon/check.svg" alt="">
+													</span>
+													<span class="checkbox__text">
+														Высокий <span>(походы, спортивные мероприятия)</span>
+													</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button type="button" class="block-filter__clear">
+									<img loading="lazy" src="img/icon/close.svg" alt="">
+									<span>Очистить фильтр</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</main>
+		</div>
+		<script src="js/swiper-10.2.0.min.js"></script>
+		<script src="js/wNumb.min.js"></script>
+		<script src="js/nouislider.min.js"></script>
+		<script src="js/fancybox.umd.js"></script>
+		<script src="js/imasked.js"></script>
+		<script src="js/scripts.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/scroll.js"></script>
+	</body>
+
+</html>

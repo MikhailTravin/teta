@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная страница</title>
+	{% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+	<div class="main-wrapper-outer">
+		{% include 'blocks/header.njk' %}
+		<main class="main">
+
+			<div class="block-benefits block1">
+				<div class="container">
+					<h2 class="title1">Комплексные решения в области силовой электроники и встраиваемых систем</h2>
+					<div class="block-benefits__content">
+						<div class="block-benefits__top">
+							<div class="block-benefits__slider swiper">
+								<div class="block-benefits__wrapper swiper-wrapper">
+									<div class="block-benefits__slide swiper-slide">
+										<video autoplay muted loop playsinline preload loading="lazy"
+											src="./files/videos/video.mp4">
+											<source loading="lazy" src="./files/videos/video.mp4" type="video/mp4">
+										</video>
+									</div>
+									<div class="block-benefits__slide swiper-slide">
+										<img loading="lazy" src="img/image1.webp" alt="">
+									</div>
+									<div class="block-benefits__slide swiper-slide">
+										<img loading="lazy" src="img/image1.webp" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="block-benefits__arrow-prev arrow-prev">
+								<svg aria-hidden="true" width="14" height="14">
+									<use xlink:href="img/sprite.svg#arrow1"></use>
+								</svg>
+							</div>
+							<div class="block-benefits__arrow-next arrow-next">
+								<svg aria-hidden="true" width="14" height="14">
+									<use xlink:href="img/sprite.svg#arrow1"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="block-benefits__bottom">
+							<div class="block-benefits__column">
+								<div class="block-benefits__title">Технический аудит</div>
+								<div class="block-benefits__subtitle">
+									Подготовим техническое<br> решение
+								</div>
+							</div>
+							<div class="block-benefits__column">
+								<div class="block-benefits__title">Производство</div>
+								<div class="block-benefits__subtitle">
+									Произведем и поставим<br>
+									на объект
+								</div>
+							</div>
+							<div class="block-benefits__column">
+								<div class="block-benefits__title">Монтаж</div>
+								<div class="block-benefits__subtitle">
+									Выполним монтаж<br>
+									и пусконаладку
+								</div>
+							</div>
+							<div class="block-benefits__column">
+								<div class="block-benefits__title">Сервис</div>
+								<div class="block-benefits__subtitle">
+									Предоставим сервисное<br>
+									и гарантийное обслуживание
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="block-categories block1">
+				<div class="container">
+					<h2 class="title2">Категории</h2>
+					<div class="block-categories__body">
+						<a href="#" class="block-categories__column">
+							<img loading="lazy" src="img/image1.webp" alt="">
+							<div class="block-categories__item">
+								<div class="block-categories__title">
+									Поставка Ni-Cd аккумуляторов
+									<span>
+										Надежные источники питания для ответственных применений.
+										Гарантия качества и долгий срок службы.
+									</span>
+								</div>
+								<div class="block-categories__number">1</div>
+							</div>
+						</a>
+						<a href="#" class="block-categories__column">
+							<img loading="lazy" src="img/image1.webp" alt="">
+							<div class="block-categories__item">
+								<div class="block-categories__title">
+									Разработка схем и ПП:
+									<span>
+										Полный цикл проектирования: от принципиальной схемы до готовых файлов для
+										производства печатных плат.
+									</span>
+								</div>
+								<div class="block-categories__number">2</div>
+							</div>
+						</a>
+						<a href="#" class="block-categories__column">
+							<img loading="lazy" src="img/image1.webp" alt="">
+							<div class="block-categories__item">
+								<div class="block-categories__title">
+									Программирование микроконтроллеров:
+									<span>
+										Создание эффективного ПО для STM32, TMS320, MilandR и других архитектур.
+									</span>
+								</div>
+								<div class="block-categories__number">3</div>
+							</div>
+						</a>
+						<a href="#" class="block-categories__column">
+							<img loading="lazy" src="img/image1.webp" alt="">
+							<div class="block-categories__item">
+								<div class="block-categories__title">
+									Разработка трансформаторов:
+									<span>
+										Расчет, проектирование и производство импульсных и сетевых трансформаторов по
+										вашим
+										требованиям.
+									</span>
+								</div>
+								<div class="block-categories__number">4</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="block-catalog block1">
+				<div class="container">
+					<div class="heading-complex">
+						<h2 class="title2">Каталог оборудования</h2>
+						<p>
+							Описание
+						</p>
+					</div>
+					<div class="block-catalog__body">
+						<a href="#" class="block-catalog__column">
+							<div class="block-catalog__icon">
+								<img loading="lazy" src="img/icon1.svg" alt="">
+							</div>
+							<div class="block-catalog__title">Строительство зданий</div>
+							<p>
+								Наши услуги после строительства дают вам душевное спокойствие, зная, что мы…
+							</p>
+							<div class="block-catalog__link">
+								<span>Посмотреть детали</span>
+								<svg aria-hidden="true" width="24" height="14">
+									<use xlink:href="img/sprite.svg#arrow2"></use>
+								</svg>
+							</div>
+						</a>
+						<a href="#" class="block-catalog__column">
+							<div class="block-catalog__icon">
+								<img loading="lazy" src="img/icon2.svg" alt="">
+							</div>
+							<div class="block-catalog__title">Строительство зданий</div>
+							<p>
+								Наши услуги после строительства дают вам душевное спокойствие, зная, что мы…
+							</p>
+							<div class="block-catalog__link">
+								<span>Посмотреть детали</span>
+								<svg aria-hidden="true" width="24" height="14">
+									<use xlink:href="img/sprite.svg#arrow2"></use>
+								</svg>
+							</div>
+						</a>
+						<a href="#" class="block-catalog__column">
+							<div class="block-catalog__icon">
+								<img loading="lazy" src="img/icon3.svg" alt="">
+							</div>
+							<div class="block-catalog__title">Строительство зданий</div>
+							<p>
+								Наши услуги после строительства дают вам душевное спокойствие, зная, что мы…
+							</p>
+							<div class="block-catalog__link">
+								<span>Посмотреть детали</span>
+								<svg aria-hidden="true" width="24" height="14">
+									<use xlink:href="img/sprite.svg#arrow2"></use>
+								</svg>
+							</div>
+						</a>
+						<a href="#" class="block-catalog__column">
+							<div class="block-catalog__icon">
+								<img loading="lazy" src="img/icon4.svg" alt="">
+							</div>
+							<div class="block-catalog__title">Строительство зданий</div>
+							<p>
+								Наши услуги после строительства дают вам душевное спокойствие, зная, что мы…
+							</p>
+							<div class="block-catalog__link">
+								<span>Посмотреть детали</span>
+								<svg aria-hidden="true" width="24" height="14">
+									<use xlink:href="img/sprite.svg#arrow2"></use>
+								</svg>
+							</div>
+						</a>
+						<a href="#" class="block-catalog__column">
+							<div class="block-catalog__icon">
+								<img loading="lazy" src="img/icon5.svg" alt="">
+							</div>
+							<div class="block-catalog__title">Строительство зданий</div>
+							<p>
+								Наши услуги после строительства дают вам душевное спокойствие, зная, что мы…
+							</p>
+							<div class="block-catalog__link">
+								<span>Посмотреть детали</span>
+								<svg aria-hidden="true" width="24" height="14">
+									<use xlink:href="img/sprite.svg#arrow2"></use>
+								</svg>
+							</div>
+						</a>
+						<a href="#" class="block-catalog__column">
+							<div class="block-catalog__icon">
+								<img loading="lazy" src="img/icon6.svg" alt="">
+							</div>
+							<div class="block-catalog__title">Строительство зданий</div>
+							<p>
+								Наши услуги после строительства дают вам душевное спокойствие, зная, что мы…
+							</p>
+							<div class="block-catalog__link">
+								<span>Посмотреть детали</span>
+								<svg aria-hidden="true" width="24" height="14">
+									<use xlink:href="img/sprite.svg#arrow2"></use>
+								</svg>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="block-about block1">
+				<div class="container">
+					<div class="block-about__content">
+						<div class="image-block-about">
+							<div class="image-block-about__text">
+								<div class="image-block-about__number">
+									15<span>+</span>
+								</div>
+								<div class="image-block-about__title">
+									ЛЕТ ОПЫТА РАБОТЫ В СТРОИТЕЛЬСТВЕ
+								</div>
+							</div>
+							<img loading="lazy" src="img/image2.webp" alt="">
+						</div>
+						<div class="block-about__body">
+							<h2 class="title2">
+								ООО "ТЕТА-Системы": Краткая информация о компании
+							</h2>
+							<p>
+								Мы — инжиниринговая компания полного цикла, специализирующаяся на разработке,
+								проектировании и поставке ключевых компонентов для современной электроники. От
+								программного обеспечения до готовых силовых модулей — мы предлагаем надежные и
+								технологичные решения для ваших самых сложных задач.
+							</p>
+							<div class="block-about__center">
+								<ul>
+									<li>
+										<div class="block-about__icon">
+											<img loading="lazy" src="img/icon2.svg" alt="">
+										</div>
+										<div class="block-about__titles">
+											<div class="block-about__title">Современные технологии</div>
+											<div class="block-about__subtitle">
+												Использование передовых технологий для повышения эффективности, точности
+												и
+												устойчивости каждого проекта.
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="block-about__icon">
+											<img loading="lazy" src="img/icon1.svg" alt="">
+										</div>
+										<div class="block-about__titles">
+											<div class="block-about__title">Опытные инженеры</div>
+											<div class="block-about__subtitle">
+												Команда опытных профессионалов, стремящихся к достижению совершенства
+												благодаря опыту и инновациям.
+											</div>
+										</div>
+									</li>
+								</ul>
+								<a href="files/videos/video.mp4" data-fancybox="video1" class="block-about__video">
+									<img loading="lazy" src="img/image1.webp" alt="">
+									<div class="play">
+										<svg aria-hidden="true" width="14" height="14">
+											<use xlink:href="img/sprite.svg#play"></use>
+										</svg>
+									</div>
+								</a>
+							</div>
+							<div class="block-about__bottom">
+								<a href="#" class="btn">
+									<span>Узнайте больше</span>
+									<div class="btn__icon">
+										<svg aria-hidden="true" width="12" height="10">
+											<use xlink:href="img/sprite.svg#arrow2"></use>
+										</svg>
+									</div>
+								</a>
+								<div class="phone-block-about">
+									<div class="phone-block-about__icon">
+										<img loading="lazy" src="img/call.svg" alt="">
+									</div>
+									<div class="phone-block-about__titles">
+										<div class="phone-block-about__title">Есть вопросы? Позвоните нам:</div>
+										<a href="tel:(02) 345 3432">(02) 345 3432</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="block-brands block1">
+				<div class="container">
+					<h2 class="title2">Компании, которые успешно используют наше оборудование</h2>
+					<div class="block-brands__content">
+						<div class="block-brands__slider swiper">
+							<div class="block-brands__wrapper swiper-wrapper">
+								<div class="block-brands__slide swiper-slide">
+									<div class="block-brands__image">
+										<img loading="lazy" src="img/brands1.webp" alt="">
+									</div>
+									<div class="block-brands__title">
+										Название компании
+										<span>Страна</span>
+									</div>
+								</div>
+								<div class="block-brands__slide swiper-slide">
+									<div class="block-brands__image">
+										<img loading="lazy" src="img/brands1.webp" alt="">
+									</div>
+									<div class="block-brands__title">
+										Название компании
+										<span>Страна</span>
+									</div>
+								</div>
+								<div class="block-brands__slide swiper-slide">
+									<div class="block-brands__image">
+										<img loading="lazy" src="img/brands1.webp" alt="">
+									</div>
+									<div class="block-brands__title">
+										Название компании
+										<span>Страна</span>
+									</div>
+								</div>
+								<div class="block-brands__slide swiper-slide">
+									<div class="block-brands__image">
+										<img loading="lazy" src="img/brands1.webp" alt="">
+									</div>
+									<div class="block-brands__title">
+										Название компании
+										<span>Страна</span>
+									</div>
+								</div>
+								<div class="block-brands__slide swiper-slide">
+									<div class="block-brands__image">
+										<img loading="lazy" src="img/brands1.webp" alt="">
+									</div>
+									<div class="block-brands__title">
+										Название компании
+										<span>Страна</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="block-section block1">
+				<div class="container">
+					<div class="block-section__heading">
+						<h2 class="title2">
+							Заказчики
+							<span>о нашей работе:</span>
+						</h2>
+						<div class="arrows">
+							<div class="block-section__arrow-prev arrow-prev">
+								<svg aria-hidden="true" width="14" height="14">
+									<use xlink:href="img/sprite.svg#arrow1"></use>
+								</svg>
+							</div>
+							<div class="block-section__arrow-next arrow-next">
+								<svg aria-hidden="true" width="14" height="14">
+									<use xlink:href="img/sprite.svg#arrow1"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="block-section__slider swiper">
+						<div class="block-section__wrapper swiper-wrapper">
+							<a href="img/image3.webp" data-fancybox="gallery1"
+								class="block-section__slide swiper-slide">
+								<img src="img/image3.webp" alt="">
+							</a>
+							<a href="img/image3.webp" data-fancybox="gallery1"
+								class="block-section__slide swiper-slide">
+								<img src="img/image3.webp" alt="">
+							</a>
+							<a href="img/image3.webp" data-fancybox="gallery1"
+								class="block-section__slide swiper-slide">
+								<img src="img/image3.webp" alt="">
+							</a>
+							<a href="img/image3.webp" data-fancybox="gallery1"
+								class="block-section__slide swiper-slide">
+								<img src="img/image3.webp" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="block-section block1 block-certificates">
+				<div class="container">
+					<div class="block-section__heading">
+						<h2 class="title2">
+							Сертификаты
+						</h2>
+						<div class="arrows">
+							<div class="block-section__arrow-prev arrow-prev">
+								<svg aria-hidden="true" width="14" height="14">
+									<use xlink:href="img/sprite.svg#arrow1"></use>
+								</svg>
+							</div>
+							<div class="block-section__arrow-next arrow-next">
+								<svg aria-hidden="true" width="14" height="14">
+									<use xlink:href="img/sprite.svg#arrow1"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="block-section__slider swiper">
+						<div class="block-section__wrapper swiper-wrapper">
+							<a href="img/image4.webp" data-fancybox="gallery2"
+								class="block-section__slide swiper-slide">
+								<div class="block-section__title">Свидетельство на товарный знак </div>
+								<img src="img/image4.webp" alt="">
+							</a>
+							<a href="img/image4.webp" data-fancybox="gallery2"
+								class="block-section__slide swiper-slide">
+								<div class="block-section__title">Свидетельство на товарный знак </div>
+								<img src="img/image4.webp" alt="">
+							</a>
+							<a href="img/image4.webp" data-fancybox="gallery2"
+								class="block-section__slide swiper-slide">
+								<div class="block-section__title">Свидетельство на товарный знак </div>
+								<img src="img/image4.webp" alt="">
+							</a>
+							<a href="img/image4.webp" data-fancybox="gallery2"
+								class="block-section__slide swiper-slide">
+								<div class="block-section__title">Свидетельство на товарный знак </div>
+								<img src="img/image4.webp" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="block-news block1">
+				<div class="container">
+					<h2 class="title2">Новости</h2>
+					<div class="block-news__content">
+						<div class="block-news__slider swiper">
+							<div class="block-news__wrapper swiper-wrapper">
+								<div class="block-news__slide swiper-slide">
+									<div class="block-news__item">
+										<div class="block-news__data">
+											<img loading="lazy" src="img/time1.svg" alt="">
+											<span>06.10.2025</span>
+										</div>
+										<div class="block-news__body">
+											<img loading="lazy" src="img/news1.webp" alt="" class="block-news__pic1">
+											<div class="block-news__titles">
+												<p>
+													Запрос предложений для заключения договора на оказание услуг по
+													организации, проведению и обеспечению участия субъектов малого и
+													среднего ...
+												</p>
+												<a href="#">
+													<svg aria-hidden="true" width="40" height="40">
+														<use xlink:href="img/sprite.svg#arrow3"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="block-news__slide swiper-slide">
+									<div class="block-news__item">
+										<div class="block-news__data">
+											<img loading="lazy" src="img/time1.svg" alt="">
+											<span>06.10.2025</span>
+										</div>
+										<div class="block-news__body">
+											<img loading="lazy" src="img/news1.webp" alt="" class="block-news__pic1">
+											<div class="block-news__titles">
+												<p>
+													Запрос предложений для заключения договора на оказание услуг по
+													организации, проведению и обеспечению участия субъектов малого и
+													среднего ...
+												</p>
+												<a href="#">
+													<svg aria-hidden="true" width="40" height="40">
+														<use xlink:href="img/sprite.svg#arrow3"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="block-news__slide swiper-slide">
+									<div class="block-news__item">
+										<div class="block-news__data">
+											<img loading="lazy" src="img/time1.svg" alt="">
+											<span>06.10.2025</span>
+										</div>
+										<div class="block-news__body">
+											<img loading="lazy" src="img/news1.webp" alt="" class="block-news__pic1">
+											<div class="block-news__titles">
+												<p>
+													Запрос предложений для заключения договора на оказание услуг по
+													организации, проведению и обеспечению участия субъектов малого и
+													среднего ...
+												</p>
+												<a href="#">
+													<svg aria-hidden="true" width="40" height="40">
+														<use xlink:href="img/sprite.svg#arrow3"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="block-news__slide swiper-slide">
+									<div class="block-news__item">
+										<div class="block-news__data">
+											<img loading="lazy" src="img/time1.svg" alt="">
+											<span>06.10.2025</span>
+										</div>
+										<div class="block-news__body">
+											<img loading="lazy" src="img/news1.webp" alt="" class="block-news__pic1">
+											<div class="block-news__titles">
+												<p>
+													Запрос предложений для заключения договора на оказание услуг по
+													организации, проведению и обеспечению участия субъектов малого и
+													среднего ...
+												</p>
+												<a href="#">
+													<svg aria-hidden="true" width="40" height="40">
+														<use xlink:href="img/sprite.svg#arrow3"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="arrows">
+							<div class="block-news__arrow-prev arrow-prev">
+								<svg aria-hidden="true" width="14" height="14">
+									<use xlink:href="img/sprite.svg#arrow1"></use>
+								</svg>
+							</div>
+							<div class="block-news__arrow-next arrow-next">
+								<svg aria-hidden="true" width="14" height="14">
+									<use xlink:href="img/sprite.svg#arrow1"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="block-forms block1">
+				<div class="container">
+					<div class="block-forms__content">
+						<div class="block-forms__left">
+							<h2 class="title2">
+								<span>Заявка</span> на проект
+							</h2>
+							<p>
+								Оставьте контактные данные, и мы свяжемся с вами в ближайшее время
+							</p>
+							<div class="block-forms__socials">
+								<a href="#">
+									<span>написать в whatsapp</span>
+									<svg aria-hidden="true" width="20" height="20">
+										<use xlink:href="img/sprite.svg#whatsapp"></use>
+									</svg>
+								</a>
+								<a href="#">
+									<span>написать в Телеграм</span>
+									<svg aria-hidden="true" width="20" height="20">
+										<use xlink:href="img/sprite.svg#telegram"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="block-forms__right">
+							<form action="#">
+								<div class="form">
+									<div class="form__inputs">
+										<div class="form__input">
+											<input data-required autocomplete="off" type="text" name="form[]"
+												data-error="Обязательное поле" placeholder="Ваше имя" class="input">
+										</div>
+										<div class="form__input">
+											<input data-required autocomplete="off" type="text" name="form[]"
+												data-error="Обязательное поле" placeholder="+7(000) 000-00-00"
+												class="input">
+										</div>
+										<div class="form__input">
+											<input data-required autocomplete="off" type="text" name="form[]"
+												data-error="Обязательное поле" placeholder="Ваша компания"
+												class="input">
+										</div>
+										<div class="form__input">
+											<textarea data-required placeholder="Ваш комментарий или вопрос"
+												class="input textarea"></textarea>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input id="c_1" data-required data-error="Обязательно поле "
+											class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<label for="c_1" class="checkbox__label">
+											<span class="checkbox__icon">
+												<img loading="lazy" src="img/mark1.svg" alt="">
+											</span>
+											<span class="checkbox__text">
+												Нажимая на кнопку «Отправить», вы даете согласие на обработку
+												персональных
+												данных и соглашаетесь с
+												<a href="#" target="_blank">Политикой
+													конфиденциальности</a>
+											</span>
+										</label>
+									</div>
+									<button type="submit" class="btn2">
+										<span>Отправить</span>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		{% include 'blocks/footer.njk' %}
+		<svg height="0" width="0">
+			<defs>
+				<clipPath id="svg_mask_news" clipPathUnits="objectBoundingBox">
+					<path
+						d="M0 0.0483871C0 0.0216637 0.023564 0 0.0526316 0H0.484211C0.513278 0 0.536842 0.0216636 0.536842 0.0483871V0.0741935C0.536842 0.100917 0.560406 0.122581 0.589474 0.122581H0.947368C0.976436 0.122581 1 0.144244 1 0.170968V0.951613C1 0.978336 0.976436 1 0.947368 1H0.0526316C0.0235639 1 0 0.978336 0 0.951613V0.0483871Z"
+						fill="#D9D9D9"></path>
+				</clipPath>
+			</defs>
+		</svg>
+	</div>
+	{% include 'blocks/scripts.njk' %}
+</body>
+
+</html>

@@ -260,6 +260,68 @@ if (document.querySelector('.block-benefits__slider')) {
     },
   });
 }
+if (document.querySelector('.block-benefits2__slider')) {
+  const swiperBenefits = new Swiper('.block-benefits2__slider', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1.1,
+    spaceBetween: 10,
+    speed: 400,
+    breakpoints: {
+      400: {
+        slidesPerView: 1.3,
+        spaceBetween: 10,
+      },
+      550: {
+        slidesPerView: 1.8,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 2.5,
+        spaceBetween: 10,
+      },
+      992: {
+        slidesPerView: 3.2,
+        spaceBetween: 10,
+      },
+      1200: {
+        slidesPerView: 3.5,
+        spaceBetween: 20,
+      },
+      1400: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    },
+  });
+}
+if (document.querySelector('.block-scope-application__slider')) {
+  const swiperScopeApplication = new Swiper('.block-scope-application__slider', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1.3,
+    spaceBetween: 10,
+    speed: 400,
+    navigation: {
+      prevEl: '.block-scope-application__arrow-prev',
+      nextEl: '.block-scope-application__arrow-next',
+    },
+    breakpoints: {
+      480: {
+        slidesPerView: 1.7,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 2.3,
+        spaceBetween: 20,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    },
+  });
+}
 document.querySelectorAll('.block-section__slider').forEach((slider, index) => {
   const swiperSection = new Swiper(slider, {
     observer: true,
@@ -445,22 +507,18 @@ document.addEventListener('DOMContentLoaded', function () {
   const header = document.querySelector('.header');
   const menu = document.querySelector('.menu');
 
-  // Функция открытия меню
   function openMenu() {
     document.documentElement.classList.add('menu-open');
   }
 
-  // Функция закрытия меню
   function closeMenu() {
     document.documentElement.classList.remove('menu-open');
   }
 
-  // Функция проверки, является ли элемент частью меню или хедера
   function isMenuOrHeader(element) {
     return header.contains(element) || menu.contains(element);
   }
 
-  // Обработчик клика на иконку меню
   menuIcon.addEventListener('click', function (e) {
     e.stopPropagation();
 
@@ -471,7 +529,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Обработчик клика по документу
   document.addEventListener('click', function (e) {
     if (document.documentElement.classList.contains('menu-open') &&
       !isMenuOrHeader(e.target)) {
@@ -479,7 +536,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Обработчик клика на ссылки внутри меню (опционально)
   const menuLinks = menuBody.querySelectorAll('a');
   menuLinks.forEach(link => {
     link.addEventListener('click', function () {

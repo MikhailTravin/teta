@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Главная страница2</title>
+    {% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+    <div class="main-wrapper-outer">
+        {% include 'blocks/header.njk' %}
+        <main class="main">
+
+            <div class="block-about block1">
+                <div class="container">
+                    <div class="block-about__content">
+                        <div class="image-block-about">
+                            <div class="image-block-about__text">
+                                <div class="image-block-about__number">
+                                    15<span>+</span>
+                                </div>
+                                <div class="image-block-about__title">
+                                    ЛЕТ ОПЫТА РАБОТЫ В СТРОИТЕЛЬСТВЕ
+                                </div>
+                            </div>
+                            <img loading="lazy" src="img/image2.webp" alt="">
+                        </div>
+                        <div class="block-about__body">
+                            <h2 class="title2">
+                                ООО "ТЕТА-Системы": Краткая информация о услуги
+                            </h2>
+                            <p>
+                                Мы — инжиниринговая компания полного цикла, специализирующаяся на разработке,
+                                проектировании и поставке ключевых компонентов для современной электроники. От
+                                программного обеспечения до готовых силовых модулей — мы предлагаем надежные и
+                                технологичные решения для ваших самых сложных задач.
+                            </p>
+                            <div class="block-about__center">
+                                <ul>
+                                    <li>
+                                        <div class="block-about__icon">
+                                            <img loading="lazy" src="img/icon2.svg" alt="">
+                                        </div>
+                                        <div class="block-about__titles">
+                                            <div class="block-about__title">Современные технологии</div>
+                                            <div class="block-about__subtitle">
+                                                Использование передовых технологий для повышения эффективности, точности
+                                                и
+                                                устойчивости каждого проекта.
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="block-about__icon">
+                                            <img loading="lazy" src="img/icon1.svg" alt="">
+                                        </div>
+                                        <div class="block-about__titles">
+                                            <div class="block-about__title">Опытные инженеры</div>
+                                            <div class="block-about__subtitle">
+                                                Команда опытных профессионалов, стремящихся к достижению совершенства
+                                                благодаря опыту и инновациям.
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a href="files/videos/video.mp4" data-fancybox="video1" class="block-about__video">
+                                    <img loading="lazy" src="img/image1.webp" alt="">
+                                    <div class="play">
+                                        <svg aria-hidden="true" width="14" height="14">
+                                            <use xlink:href="img/sprite.svg#play"></use>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="block-about__bottom">
+                                <a href="#" class="btn">
+                                    <span>Узнайте больше</span>
+                                    <div class="btn__icon">
+                                        <svg aria-hidden="true" width="12" height="10">
+                                            <use xlink:href="img/sprite.svg#arrow2"></use>
+                                        </svg>
+                                    </div>
+                                </a>
+                                <div class="phone-block-about">
+                                    <div class="phone-block-about__icon">
+                                        <img loading="lazy" src="img/call.svg" alt="">
+                                    </div>
+                                    <div class="phone-block-about__titles">
+                                        <div class="phone-block-about__title">Есть вопросы? Позвоните нам:</div>
+                                        <a href="tel:(02) 345 3432">(02) 345 3432</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-benefits2 block1">
+                <div class="container">
+                    <div class="block-benefits2__content">
+                        <div class="block-benefits2__heading">
+                            <h2 class="title2">Преимущества наших решений</h2>
+                            <a href="#" class="btn">
+                                <span>Узнайте больше</span>
+                                <div class="btn__icon">
+                                    <svg aria-hidden="true" width="12" height="10">
+                                        <use xlink:href="img/sprite.svg#arrow2"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="block-benefits2__slider swiper">
+                            <div class="block-benefits2__wrapper swiper-wrapper">
+                                <div class="block-benefits2__slide swiper-slide">
+                                    <div class="block-benefits2__icons">
+                                        <div class="block-benefits2__icon">
+                                            <img loading="lazy" src="img/icon1.svg" alt="">
+                                        </div>
+                                        <div class="block-benefits2__number">01.</div>
+                                    </div>
+                                    <div class="block-benefits2__title">Строительство зданий</div>
+                                    <p>
+                                        Работа в широком температурном диапазоне (от -50°C до +40°C)
+                                    </p>
+                                    <a href="#" class="block-benefits2__link">
+                                        <div class="icon"></div>
+                                        <span>Посмотреть детали</span>
+                                    </a>
+                                </div>
+                                <div class="block-benefits2__slide swiper-slide">
+                                    <div class="block-benefits2__icons">
+                                        <div class="block-benefits2__icon">
+                                            <img loading="lazy" src="img/icon2.svg" alt="">
+                                        </div>
+                                        <div class="block-benefits2__number">02.</div>
+                                    </div>
+                                    <div class="block-benefits2__title">Строительство зданий</div>
+                                    <p>
+                                        Высокая устойчивость к перезаряду и глубокому разряду
+                                    </p>
+                                    <a href="#" class="block-benefits2__link">
+                                        <div class="icon"></div>
+                                        <span>Посмотреть детали</span>
+                                    </a>
+                                </div>
+                                <div class="block-benefits2__slide swiper-slide">
+                                    <div class="block-benefits2__icons">
+                                        <div class="block-benefits2__icon">
+                                            <img loading="lazy" src="img/icon3.svg" alt="">
+                                        </div>
+                                        <div class="block-benefits2__number">03.</div>
+                                    </div>
+                                    <div class="block-benefits2__title">Строительство зданий</div>
+                                    <p>
+                                        Долгий срок службы (до 2000 циклов заряд-разряд).
+                                    </p>
+                                    <a href="#" class="block-benefits2__link">
+                                        <div class="icon"></div>
+                                        <span>Посмотреть детали</span>
+                                    </a>
+                                </div>
+                                <div class="block-benefits2__slide swiper-slide">
+                                    <div class="block-benefits2__icons">
+                                        <div class="block-benefits2__icon">
+                                            <img loading="lazy" src="img/icon4.svg" alt="">
+                                        </div>
+                                        <div class="block-benefits2__number">04.</div>
+                                    </div>
+                                    <div class="block-benefits2__title">Строительство зданий</div>
+                                    <p>
+                                        Поставка как стандартных типоразмеров, так и сборка батарей по вашим
+                                        спецификациям.
+                                    </p>
+                                    <a href="#" class="block-benefits2__link">
+                                        <div class="icon"></div>
+                                        <span>Посмотреть детали</span>
+                                    </a>
+                                </div>
+                                <div class="block-benefits2__slide swiper-slide">
+                                    <div class="block-benefits2__icons">
+                                        <div class="block-benefits2__icon">
+                                            <img loading="lazy" src="img/icon4.svg" alt="">
+                                        </div>
+                                        <div class="block-benefits2__number">05.</div>
+                                    </div>
+                                    <div class="block-benefits2__title">Строительство зданий</div>
+                                    <p>
+                                        Поставка как стандартных типоразмеров, так и сборка батарей по вашим
+                                        спецификациям.
+                                    </p>
+                                    <a href="#" class="block-benefits2__link">
+                                        <div class="icon"></div>
+                                        <span>Посмотреть детали</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-mob">
+                            <span>Узнайте больше</span>
+                            <div class="btn__icon">
+                                <svg aria-hidden="true" width="12" height="10">
+                                    <use xlink:href="img/sprite.svg#arrow2"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-scope-application block1">
+                <div class="container">
+                    <div class="block-scope-application__content">
+                        <h2 class="title2">Области применения</h2>
+                        <div class="block-scope-application__slider swiper">
+                            <div class="block-scope-application__wrapper swiper-wrapper">
+                                <a href="#" class="block-scope-application__slide swiper-slide">
+                                    <div class="block-scope-application__image">
+                                        <img loading="lazy" src="img/image1.webp" alt="">
+                                    </div>
+                                    <div class="block-scope-application__title">
+                                        Системы аварийного питания (АВР)
+                                    </div>
+                                </a>
+                                <a href="#" class="block-scope-application__slide swiper-slide">
+                                    <div class="block-scope-application__image">
+                                        <img loading="lazy" src="img/image1.webp" alt="">
+                                    </div>
+                                    <div class="block-scope-application__title">
+                                        Телекоммуникационное оборудование
+                                    </div>
+                                </a>
+                                <a href="#" class="block-scope-application__slide swiper-slide">
+                                    <div class="block-scope-application__image">
+                                        <img loading="lazy" src="img/image1.webp" alt="">
+                                    </div>
+                                    <div class="block-scope-application__title">
+                                        Пусковые устройства для авиации и спецтехники
+                                    </div>
+                                </a>
+                                <a href="#" class="block-scope-application__slide swiper-slide">
+                                    <div class="block-scope-application__image">
+                                        <img loading="lazy" src="img/image1.webp" alt="">
+                                    </div>
+                                    <div class="block-scope-application__title">
+                                        Медицинская аппаратура
+                                    </div>
+                                </a>
+                                <a href="#" class="block-scope-application__slide swiper-slide">
+                                    <div class="block-scope-application__image">
+                                        <img loading="lazy" src="img/image1.webp" alt="">
+                                    </div>
+                                    <div class="block-scope-application__title">
+                                        Портативный инструмент
+                                    </div>
+                                </a>
+                                <a href="#" class="block-scope-application__slide swiper-slide">
+                                    <div class="block-scope-application__image">
+                                        <img loading="lazy" src="img/image1.webp" alt="">
+                                    </div>
+                                    <div class="block-scope-application__title">
+                                        Системы аварийного питания (АВР)
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="arrows">
+                            <div class="block-scope-application__arrow-prev arrow-prev">
+                                <svg aria-hidden="true" width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#arrow1"></use>
+                                </svg>
+                            </div>
+                            <div class="block-scope-application__arrow-next arrow-next">
+                                <svg aria-hidden="true" width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#arrow1"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-forms block1">
+                <div class="container">
+                    <div class="block-forms__content">
+                        <div class="block-forms__left">
+                            <h2 class="title2">
+                                <span>Заявка</span> на проект
+                            </h2>
+                            <p>
+                                Оставьте контактные данные, и мы свяжемся с вами в ближайшее время
+                            </p>
+                            <div class="block-forms__socials">
+                                <a href="#">
+                                    <span>написать в whatsapp</span>
+                                    <svg aria-hidden="true" width="20" height="20">
+                                        <use xlink:href="img/sprite.svg#whatsapp"></use>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <span>написать в Телеграм</span>
+                                    <svg aria-hidden="true" width="20" height="20">
+                                        <use xlink:href="img/sprite.svg#telegram"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="block-forms__right">
+                            <form action="#">
+                                <div class="form">
+                                    <div class="form__inputs">
+                                        <div class="form__input">
+                                            <input data-required autocomplete="off" type="text" name="form[]"
+                                                data-error="Обязательное поле" placeholder="Ваше имя" class="input">
+                                        </div>
+                                        <div class="form__input">
+                                            <input data-required autocomplete="off" type="text" name="form[]"
+                                                data-error="Обязательное поле" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ"
+                                                class="input tel">
+                                        </div>
+                                        <div class="form__input">
+                                            <input data-required autocomplete="off" type="text" name="form[]"
+                                                data-error="Обязательное поле" placeholder="Ваша компания"
+                                                class="input">
+                                        </div>
+                                        <div class="form__input">
+                                            <textarea data-required placeholder="Ваш комментарий или вопрос"
+                                                class="input textarea"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input id="c_1" data-required data-error="Обязательно поле "
+                                            class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                        <label for="c_1" class="checkbox__label">
+                                            <span class="checkbox__icon">
+                                                <img loading="lazy" src="img/mark1.svg" alt="">
+                                            </span>
+                                            <span class="checkbox__text">
+                                                Нажимая на кнопку «Отправить», вы даете согласие на обработку
+                                                персональных
+                                                данных и соглашаетесь с
+                                                <a href="#" target="_blank">Политикой
+                                                    конфиденциальности</a>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="btn2">
+                                        <span>Отправить</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        {% include 'blocks/footer.njk' %}
+    </div>
+    {% include 'blocks/scripts.njk' %}
+</body>
+
+</html>

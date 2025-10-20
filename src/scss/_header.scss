@@ -6,6 +6,9 @@
   height: auto;
   z-index: 100;
   background-color: #fff;
+  .menu-open & {
+    background-color: transparent;
+  }
   // .header__content
 
   &__content {

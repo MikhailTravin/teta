@@ -71,59 +71,6 @@
     transform: translate(0px, -50%);
     z-index: 20;
   }
-
-  // .block-benefits__bottom
-
-  &__bottom {
-    display: grid;
-    gap: 8px;
-    grid-template-columns: repeat(4, 1fr);
-    @media (max-width: 768px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  // .block-benefits__column
-
-  &__column {
-    display: flex;
-    flex-direction: column;
-    gap: 34px;
-    padding: 20px;
-    border-radius: 15px;
-    background: var(--color-gray-light);
-    @media (max-width: 992px) {
-      gap: 6px;
-      padding: 15px 14px;
-    }
-    @media (max-width: 768px) {
-      padding: 20px 10px;
-    }
-  }
-
-  // .block-benefits__title
-
-  &__title {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 125%;
-    text-transform: uppercase;
-    @media (max-width: 768px) {
-      font-size: 15px;
-    }
-  }
-
-  // .block-benefits__subtitle
-
-  &__subtitle {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 120%;
-    opacity: 0.6;
-    @media (max-width: 768px) {
-      font-size: 14px;
-    }
-  }
 }
 
 .block-categories {
@@ -168,6 +115,7 @@
     &:hover {
       img {
         filter: grayscale(0);
+        transform: scale(1.05);
       }
     }
     img {
@@ -178,7 +126,9 @@
       height: 100%;
       object-fit: cover;
       filter: grayscale(1);
-      transition: filter 0.7s;
+      transition:
+        filter 0.7s,
+        transform 0.7s;
       z-index: 2;
     }
     &::before {
@@ -263,11 +213,19 @@
     @media (max-width: 1200px) {
       grid-template-columns: repeat(2, 1fr);
     }
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
-    @media (max-width: 480px) {
+    @media (max-width: 992px) {
+      display: flex;
+      flex-wrap: nowrap;
+      width: calc(100% + 20px);
+      margin: 0px -10px;
+      padding: 0px 10px;
+      overflow: auto;
       gap: 16px;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
 
@@ -283,8 +241,17 @@
     border: 1px solid var(--color-gray-light);
     padding: 40px 50px;
     border-radius: 15px;
+    @media (max-width: 992px) {
+      flex: 0 0 400px;
+    }
+    @media (max-width: 768px) {
+      flex: 0 0 350px;
+    }
     @media (max-width: 550px) {
       padding: 30px 20px;
+    }
+    @media (max-width: 480px) {
+      flex: 0 0 300px;
     }
     &:hover {
       border: 1px solid var(--color-gray-dark);
@@ -331,6 +298,7 @@
   // .block-catalog__title
 
   &__title {
+    flex: 1 1 auto;
     font-weight: 600;
     font-size: 22px;
     line-height: 120%;

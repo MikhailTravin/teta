@@ -543,3 +543,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+const chatWidgetImages = document.querySelector('.chat-widget__images');
+const chatWidgetBody = document.querySelector('.chat-widget__body');
+
+if (chatWidgetImages && chatWidgetBody) {
+  chatWidgetImages.addEventListener('click', function () {
+    chatWidgetBody.classList.toggle('active');
+  });
+}

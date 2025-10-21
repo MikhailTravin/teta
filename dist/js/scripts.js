@@ -433,9 +433,13 @@ if (filterContainers) {
         observer: true,
         observeParents: true,
         autoHeight: true,
-        slidesPerView: 1,
+        slidesPerView: 1.1,
         spaceBetween: 10,
         breakpoints: {
+          450: {
+            slidesPerView: 1.3,
+            spaceBetween: 10,
+          },
           550: {
             slidesPerView: 1.5,
             spaceBetween: 10,
@@ -445,8 +449,12 @@ if (filterContainers) {
             spaceBetween: 10,
           },
           992: {
-            slidesPerView: 3.5,
+            slidesPerView: 3.2,
             spaceBetween: 15,
+          },
+          1200: {
+            slidesPerView: 3.5,
+            spaceBetween: 30,
           },
           1400: {
             slidesPerView: 4,

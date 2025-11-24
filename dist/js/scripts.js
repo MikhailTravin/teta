@@ -349,6 +349,7 @@ document.querySelectorAll('.block-section__slider').forEach((slider, index) => {
     },
   });
 });
+
 if (document.querySelector('.block-brands-filter__slider')) {
   const slider = document.querySelector('.block-brands-filter__slider');
   const wrapper = document.querySelector('.block-brands-filter__wrapper');
@@ -361,7 +362,7 @@ if (document.querySelector('.block-brands-filter__slider')) {
 
   let position = 0;
   let animationId;
-  const speed = 0.5; // Скорость прокрутки (пикселей за кадр)
+  const speed = 0.5;
 
   function animate() {
     position -= speed;
@@ -386,19 +387,47 @@ if (document.querySelector('.block-brands-filter__slider')) {
   });
 }
 
-Fancybox.bind("[data-fancybox]", {
-  // опции
-});
+if (document.querySelector('.block-brands-filter__slider')) {
+  const slider = document.querySelector('.block-brands-filter__slider');
+  const wrapper = document.querySelector('.block-brands-filter__wrapper');
+  const slides = document.querySelectorAll('.block-brands-filter__slide');
 
-//Маска телефон
-const telephone = document.querySelectorAll(".tel");
-if (telephone) Inputmask({
-  mask: "+7 (999) - 999 - 99 - 99"
-}).mask(telephone);
+  slides.forEach(slide => {
+    const clone = slide.cloneNode(true);
+    wrapper.appendChild(clone);
+  });
+
+  let position = 0;
+  let animationId;
+  const speed = 0.5;
+
+  function animate() {
+    position -= speed;
+
+    const wrapperWidth = wrapper.scrollWidth / 2;
+    if (Math.abs(position) >= wrapperWidth) {
+      position = 0;
+    }
+
+    wrapper.style.transform = `translateX(${position}px)`;
+    animationId = requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  slider.addEventListener('mouseenter', () => {
+    cancelAnimationFrame(animationId);
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    animate();
+  });
+}
 
 const filterContainers = document.querySelectorAll('[data-filters]');
-if (filterContainers) {
+if (filterContainers.length) {
   const swiperInstances = {};
+
   function initSwipers() {
     if (document.querySelector('.block-news-bottom__slider')) {
       swiperInstances.news = new Swiper('.block-news-bottom__slider', {
@@ -428,8 +457,84 @@ if (filterContainers) {
       });
     }
 
-    if (document.querySelector('.block-brands__slider')) {
-      swiperInstances.brands = new Swiper('.block-brands__slider', {
+    const activeBrandSliders = document.querySelectorAll('.block-brands__slider.active');
+    if (activeBrandSliders.length) {
+      swiperInstances.brands = [];
+
+      activeBrandSliders.forEach((slider, index) => {
+        const swiperInstance = new Swiper(slider, {
+          observer: true,
+          observeParents: true,
+          autoHeight: true,
+          slidesPerView: 1.1,
+          spaceBetween: 10,
+          breakpoints: {
+            450: {
+              slidesPerView: 1.3,
+              spaceBetween: 10,
+            },
+            550: {
+              slidesPerView: 1.5,
+              spaceBetween: 10,
+            },
+            700: {
+              slidesPerView: 2.5,
+              spaceBetween: 10,
+            },
+            992: {
+              slidesPerView: 3.2,
+              spaceBetween: 15,
+            },
+            1200: {
+              slidesPerView: 3.5,
+              spaceBetween: 30,
+            },
+            1400: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+          },
+        });
+
+        swiperInstances.brands.push({
+          instance: swiperInstance,
+          filter: slider.getAttribute('data-filter')
+        });
+      });
+    }
+  }
+
+  function updateSwipers() {
+    if (swiperInstances.news) {
+      swiperInstances.news.update();
+      swiperInstances.news.updateAutoHeight();
+      swiperInstances.news.slideTo(0);
+    }
+
+    if (swiperInstances.brands && swiperInstances.brands.length) {
+      swiperInstances.brands.forEach(brandSwiper => {
+        brandSwiper.instance.update();
+        brandSwiper.instance.updateAutoHeight();
+        brandSwiper.instance.slideTo(0);
+      });
+    }
+  }
+
+  function destroyBrandSwipers() {
+    if (swiperInstances.brands && swiperInstances.brands.length) {
+      swiperInstances.brands.forEach(brandSwiper => {
+        if (brandSwiper.instance && !brandSwiper.instance.destroyed) {
+          brandSwiper.instance.destroy(true, true);
+        }
+      });
+      swiperInstances.brands = [];
+    }
+  }
+
+  function initActiveBrandSwiper(filterValue) {
+    const activeSlider = document.querySelector(`.block-brands__slider[data-filter="${filterValue}"]`);
+    if (activeSlider) {
+      const swiperInstance = new Swiper(activeSlider, {
         observer: true,
         observeParents: true,
         autoHeight: true,
@@ -462,26 +567,53 @@ if (filterContainers) {
           },
         },
       });
-    }
-  }
-  function updateSwipers() {
-    if (swiperInstances.news) {
-      swiperInstances.news.update();
-      swiperInstances.news.updateAutoHeight();
-      swiperInstances.news.slideTo(0);
-    }
 
-    if (swiperInstances.brands) {
-      swiperInstances.brands.update();
-      swiperInstances.brands.updateAutoHeight();
-      swiperInstances.brands.slideTo(0);
+      if (!swiperInstances.brands) {
+        swiperInstances.brands = [];
+      }
+
+      swiperInstances.brands.push({
+        instance: swiperInstance,
+        filter: filterValue
+      });
     }
   }
+
+  function filterNewsBlocks(container, filterValue) {
+    const newsBlocks = container.querySelectorAll('.block-news-bottom__slide.filter-block');
+
+    newsBlocks.forEach(block => {
+      const blockFilter = block.getAttribute('data-filter');
+
+      if (filterValue === 'all' || blockFilter === filterValue) {
+        block.classList.remove('hide');
+      } else {
+        block.classList.add('hide');
+      }
+    });
+  }
+
+  function handleBrandsFilter(container, filterValue) {
+    const brandSliders = container.querySelectorAll('.block-brands__slider');
+
+    brandSliders.forEach(slider => {
+      slider.classList.remove('active');
+    });
+
+    const activeSlider = container.querySelector(`.block-brands__slider[data-filter="${filterValue}"]`);
+    if (activeSlider) {
+      activeSlider.classList.add('active');
+      destroyBrandSwipers();
+      initActiveBrandSwiper(filterValue);
+    }
+  }
+
   function initFilters() {
-
     filterContainers.forEach(container => {
       const filterButtons = container.querySelectorAll('.filter-title');
-      const filterBlocks = container.querySelectorAll('.filter-block');
+
+      const isNewsContainer = container.querySelector('.block-news-bottom__slider');
+      const isBrandsContainer = container.querySelector('.block-brands__slider');
 
       filterButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -490,24 +622,36 @@ if (filterContainers) {
           filterButtons.forEach(btn => btn.classList.remove('active'));
           button.classList.add('active');
 
-          filterBlocks.forEach(block => {
-            const blockFilter = block.getAttribute('data-filter');
+          if (isNewsContainer) {
+            filterNewsBlocks(container, filterValue);
+          }
 
-            if (filterValue === 'all' || blockFilter === filterValue) {
-              block.classList.remove('hide');
-            } else {
-              block.classList.add('hide');
-            }
-          });
+          if (isBrandsContainer) {
+            handleBrandsFilter(container, filterValue);
+          }
 
-          updateSwipers();
+          setTimeout(() => {
+            updateSwipers();
+          }, 50);
         });
       });
     });
   }
+
   initSwipers();
   initFilters();
 }
+
+Fancybox.bind("[data-fancybox]", {
+  // опции
+});
+
+//Маска телефон
+const telephone = document.querySelectorAll(".tel");
+if (telephone) Inputmask({
+  mask: "+7 (999) - 999 - 99 - 99"
+}).mask(telephone);
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const menuIcon = document.querySelector('.icon-menu');

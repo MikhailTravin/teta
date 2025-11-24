@@ -931,6 +931,10 @@
   &__slider {
     padding: 0px 30px;
     width: 100%;
+    display: none;
+    &.active {
+      display: block;
+    }
     @media (max-width: 992px) {
       padding: 0px 10px;
     }

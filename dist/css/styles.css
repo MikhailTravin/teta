@@ -2434,6 +2434,10 @@ a {
 .block-brands__slider {
   padding: 0px 30px;
   width: 100%;
+  display: none;
+}
+.block-brands__slider.active {
+  display: block;
 }
 @media (max-width: 992px) {
   .block-brands__slider {
